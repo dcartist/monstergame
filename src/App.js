@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from "./Component/Home/Home"
 import Gladiators from "./Component/Gladiator/Gladiator"
@@ -8,7 +7,7 @@ import Error404 from "./Error404"
 import Weapons from "./Component/Gladiator/Weapons"
 import Navigation from "./Component/Navigation/Navigation"
 import React, { useState } from 'react';
-import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 
 function App() {
   const [UserweaponSelect, setUserWeapon] = useState(0);
