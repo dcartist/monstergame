@@ -2,7 +2,7 @@ import './App.css';
 import Home from "./Component/Home/Home"
 import Gladiators from "./Component/Gladiator/Gladiator"
 import About from "./Component/About/About"
-import Fight from "./Component/Gladiator/Flight"
+import Fight from "./Component/Gladiator/Fight"
 import Rules from "./Component/Rules/Rules"
 import Error404 from "./Error404"
 import Weapons from "./Component/Gladiator/Weapons"
