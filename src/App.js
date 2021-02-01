@@ -17,7 +17,7 @@ function App() {
   const [UserWarrior, setUserWarrior] = useState();
   const [Results, setResults] = useState("NO FIGHT YET");
   
-  function Fight(){
+  function fight(){
     let RandomWeapon = Math.floor(Math.random() * 3)+1;
     setFightNumber(RandomWeapon)
     switch(UserweaponSelect){
@@ -69,7 +69,7 @@ function App() {
         <Route exact path="/about"><About /></Route>
         <Route exact path="/rules"><Rules /></Route>
         <Route exact path="/gladiator"> <Gladiators setUserWarrior={setUserWarrior}></Gladiators></Route>
-        <Route exact path="/fight"> <Fight Fight={Fight} Results={Results}></Fight></Route>
+        <Route exact path="/fight"> <Fight fight={fight} Results={Results}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
         <Route component={Error404}>
             
