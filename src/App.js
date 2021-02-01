@@ -3,6 +3,7 @@ import './App.css';
 import Home from "./Component/Home/Home"
 import Gladiators from "./Component/Gladiator/Gladiator"
 import About from "./Component/About/About"
+import Rules from "./Component/Rules/Rules"
 import Weapons from "./Component/Gladiator/Weapons"
 import Navigation from "./Component/Navigation/Navigation"
 import React, { useState } from 'react';
@@ -60,6 +61,7 @@ function App() {
 
         <Route exact path="/"><Home /></Route>
         <Route exact path="/about"><About /></Route>
+        <Route exact path="/rules"><Rules /></Route>
         <Route exact path="/gladiator"> <Gladiators setUserWarrior={setUserWarrior}></Gladiators></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
       </div>
