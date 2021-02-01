@@ -2,6 +2,7 @@ import './App.css';
 import Home from "./Component/Home/Home"
 import Gladiators from "./Component/Gladiator/Gladiator"
 import About from "./Component/About/About"
+import Fight from "./Component/Gladiator/Flight"
 import Rules from "./Component/Rules/Rules"
 import Error404 from "./Error404"
 import Weapons from "./Component/Gladiator/Weapons"
@@ -68,6 +69,7 @@ function App() {
         <Route exact path="/about"><About /></Route>
         <Route exact path="/rules"><Rules /></Route>
         <Route exact path="/gladiator"> <Gladiators setUserWarrior={setUserWarrior}></Gladiators></Route>
+        <Route exact path="/gladiator"> <Fight Fight={Fight} Results={Results}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
         <Route component={Error404}>
             
