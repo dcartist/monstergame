@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Home from "./Component/Home/Home"
 import Gladiators from "./Component/Gladiator/Gladiator"
+import About from "./Component/About/About"
 import Weapons from "./Component/Gladiator/Weapons"
+import Navigation from "./Component/Navigation/Navigation"
 import React, { useState } from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 
@@ -51,20 +53,15 @@ function App() {
   }
   return (
     <div className="full-width">
-      {UserweaponSelect}
-      {UserWarrior}
-    <h1>Weapons</h1>
-    <Weapons setUserWeapon={setUserWeapon}></Weapons>
-    <h1>WARRIOR</h1>
-    <Gladiators setUserWarrior={setUserWarrior}></Gladiators>
-    <h1>FIGHT!</h1>
-    <p>  <button onClick={Fight}> FIGHT</button> </p>
-   <h1>{Results}</h1>
-   {fightNumber}
-    
+          <Navigation />
+   
+    {/* <p>  <button onClick={Fight}> FIGHT</button> </p>  */}
 
 
-    <Route path="/" exact component={Home} />
+        <Route exact path="/"><Home /></Route>
+        <Route exact path="/about"><About /></Route>
+        <Route exact path="/gladiator"> <Gladiators setUserWarrior={setUserWarrior}></Gladiators></Route>
+        <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
       </div>
   );
 }
