@@ -61,9 +61,9 @@ function App() {
     <div className="full-width">
           <Navigation />
    
-    Score: 
+    {/* Score: 
     <div className="flex items-center justify-center rounded-full bg-black text-white shadow-xl w-14 h-14">{Score}</div>
-    <p>  <button onClick={Fight} className="p-3 border-black border"> FIGHT</button> </p> 
+    <p>  <button onClick={Fight} className="p-3 border-black border"> FIGHT</button> </p>  */}
 <Switch>
         <Route exact path="/"><Home /></Route>
         <Route exact path="/about"><About /></Route>
