@@ -3,6 +3,7 @@ import Home from "./Component/Home/Home"
 import Gladiators from "./Component/Gladiator/Gladiator"
 import About from "./Component/About/About"
 import Fight from "./Component/Gladiator/Fight"
+import FinalResults from "./Component/Gladiator/Results"
 import Rules from "./Component/Rules/Rules"
 import Error404 from "./Error404"
 import Weapons from "./Component/Gladiator/Weapons"
@@ -15,12 +16,9 @@ function App() {
   const [CompWeapon, setCompWeapon] = useState(0);
   const [CompWarrior, setCompWarrior] = useState(0);
   const [Score, setScore] = useState(0);
+  const [Winner, setWinner] = useState();
   const [UserWarrior, setUserWarrior] = useState();
   const [Results, setResults] = useState("NO FIGHT YET");
-
-  useEffect(() => {
-   
-  });
 
   function selectFighter(fighter){
     setUserWarrior(fighter)
@@ -34,28 +32,35 @@ function App() {
     switch(UserweaponSelect){
       case CompWeapon:
         setResults("Equal")
+        setWinner(false)
         break;
       case 3:
         if (CompWeapon === 1){
             setResults(`${UserWarrior} lost!`)
+            setWinner(false)
           } else {
             setResults(`${UserWarrior} won!`)
+            setWinner(true)
             setScore(Score + 1)
           }
         break;
       case 1:
         if (CompWeapon === 3){
             setResults(`${UserWarrior} Wins!`)
+            setWinner(true)
             setScore(Score + 1)
           } else {
             setResults(`${UserWarrior} lost!`)
+            setWinner(false)
           }
         break;
       default:
         if (CompWeapon === 3){
           setResults(`${UserWarrior} lost!`)
+          setWinner(false)
         } else {
           setResults(`${UserWarrior} win!`)
+          setWinner(true)
           setScore(Score + 1)
         }
     }
@@ -63,11 +68,7 @@ function App() {
   return (
     <div className="full-width">
           <Navigation />
-   
-    {/* Score: 
-    <div className="flex items-center justify-center rounded-full bg-black text-white shadow-xl w-14 h-14">{Score}</div>
-    <p>  <button onClick={Fight} className="p-3 border-black border"> FIGHT</button> </p>  */}
-  
+
 <Switch>
 
         <Route exact path="/"><Home /></Route>
@@ -76,6 +77,7 @@ function App() {
         <Route exact path="/gladiator"> <Gladiators selectFighter={selectFighter}></Gladiators></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
+        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Results={Results}></FinalResults></Route>
         <Route component={Error404}></Route>
           </Switch>
       </div>
