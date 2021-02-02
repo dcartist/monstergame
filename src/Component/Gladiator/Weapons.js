@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 function Weapons(props){
+    
     return(
         <div className="flex flex-row w-full h-96 items-center">
             <div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border"><img src={process.env.PUBLIC_URL + `/weapons/2.png`} alt={`Paper`} className="w-1/2"/> 
