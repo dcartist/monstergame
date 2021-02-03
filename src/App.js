@@ -17,11 +17,19 @@ function App() {
   const [CompWeapon, setCompWeapon] = useState(0);
   const [CompWarrior, setCompWarrior] = useState(0);
   const [Score, setScore] = useState(0);
-  const [Winner, setWinner] = useState(false);
+  const [Fighttimes, setFighttimes] = useState(0);
+  const [Winner, setWinner] = useState('');
   const [Results, setResults] = useState("NO FIGHT YET");
 
   function selectFighter(fighter){
     setUserWarrior(fighter)
+    let RandomWarrior = Math.floor(Math.random() * 9);
+    setCompWarrior(RandomWarrior)
+    let RandomWeapon = Math.floor(Math.random() * 3)+1;
+    setCompWeapon(RandomWeapon)
+  }
+
+  function selectRandomWarrior(){
     let RandomWarrior = Math.floor(Math.random() * 9);
     setCompWarrior(RandomWarrior)
     let RandomWeapon = Math.floor(Math.random() * 3)+1;
@@ -36,38 +44,39 @@ function reset(){
   setUserWarrior()
 }
   function fight(){
+    setFighttimes(Fighttimes + 1)
     switch(UserweaponSelect){
-      case CompWeapon:
+      case (CompWeapon):
         setResults("Equal")
-        setWinner(false)
+        setWinner('Lost')
         break;
       case 3:
         if (CompWeapon === 1){
             setResults(`${UserWarrior} lost!`)
-            setWinner(false)
+            setWinner('Lost')
           } else {
             setResults(`${UserWarrior} won!`)
-            setWinner(true)
+            setWinner('WINS!')
             setScore(Score + 1)
           }
         break;
       case 1:
         if (CompWeapon === 3){
             setResults(`${UserWarrior} Wins!`)
-            setWinner(true)
+            setWinner('WINS!')
             setScore(Score + 1)
           } else {
             setResults(`${UserWarrior} lost!`)
-            setWinner(false)
+            setWinner('Lost')
           }
         break;
       default:
         if (CompWeapon === 3){
           setResults(`${UserWarrior} lost!`)
-          setWinner(false)
+          setWinner('Lost')
         } else {
           setResults(`${UserWarrior} win!`)
-          setWinner(true)
+          setWinner('WINS!')
           setScore(Score + 1)
         }
     }
@@ -75,6 +84,7 @@ function reset(){
   return (
     <div className="full-width">
           <Navigation />
+          <p> Fight Times: {Fighttimes} || Score: {Score}</p>
 
 <Switch>
 
@@ -84,7 +94,7 @@ function reset(){
         <Route exact path="/gladiator"> <Gladiators selectFighter={selectFighter}></Gladiators></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
-        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Results={Results}></FinalResults></Route>
+        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Results={Results} Winner={Winner} Score={Score} selectRandomWarrior={selectRandomWarrior}></FinalResults></Route>
         <Route component={Error404}></Route>
           </Switch>
       </div>
