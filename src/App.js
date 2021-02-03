@@ -13,11 +13,11 @@ import { Route, Switch} from 'react-router-dom';
 
 function App() {
   const [UserweaponSelect, setUserWeapon] = useState(0);
+  const [UserWarrior, setUserWarrior] = useState();
   const [CompWeapon, setCompWeapon] = useState(0);
   const [CompWarrior, setCompWarrior] = useState(0);
   const [Score, setScore] = useState(0);
-  const [Winner, setWinner] = useState();
-  const [UserWarrior, setUserWarrior] = useState();
+  const [Winner, setWinner] = useState(false);
   const [Results, setResults] = useState("NO FIGHT YET");
 
   function selectFighter(fighter){
@@ -27,7 +27,14 @@ function App() {
     let RandomWeapon = Math.floor(Math.random() * 3)+1;
     setCompWeapon(RandomWeapon)
   }
-
+function reset(){
+  setWinner()
+  setResults("")
+  setUserWeapon(0)
+  setCompWeapon(0)
+  setCompWarrior(0)
+  setUserWarrior()
+}
   function fight(){
     switch(UserweaponSelect){
       case CompWeapon:
