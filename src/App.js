@@ -7,9 +7,10 @@ import FinalResults from "./Component/Gladiator/Results"
 import Rules from "./Component/Rules/Rules"
 import Error404 from "./Error404"
 import Weapons from "./Component/Gladiator/Weapons"
-import Navigation from "./Component/Navigation/Navigation"
-import React, { useState, useEffect } from 'react';
 import { Route, Switch} from 'react-router-dom';
+import Navigation from "./Component/Navigation/Navigation"
+import React, { useState } from 'react';
+import "./Component/AnimationCheat/Animation.css"
 
 function App() {
   const [UserweaponSelect, setUserWeapon] = useState(0);
@@ -48,35 +49,35 @@ function reset(){
     switch(UserweaponSelect){
       case (CompWeapon):
         setResults("Equal")
-        setWinner('Lost')
+        setWinner('Lost!!!')
         break;
       case 3:
         if (CompWeapon === 1){
-            setResults(`${UserWarrior} lost!`)
-            setWinner('Lost')
+            setResults(`${UserWarrior} Lost!!!!`)
+            setWinner('Lost!!!')
           } else {
             setResults(`${UserWarrior} won!`)
-            setWinner('WINS!')
+            setWinner('Won!!!!')
             setScore(Score + 1)
           }
         break;
       case 1:
         if (CompWeapon === 3){
-            setResults(`${UserWarrior} Wins!`)
-            setWinner('WINS!')
+            setResults(`${UserWarrior} Won!!!!`)
+            setWinner('Won!!!!')
             setScore(Score + 1)
           } else {
-            setResults(`${UserWarrior} lost!`)
-            setWinner('Lost')
+            setResults(`${UserWarrior} Lost!!!!`)
+            setWinner('Lost!!!')
           }
         break;
       default:
         if (CompWeapon === 3){
-          setResults(`${UserWarrior} lost!`)
-          setWinner('Lost')
+          setResults(`${UserWarrior} Lost!!!!`)
+          setWinner('Lost!!!')
         } else {
           setResults(`${UserWarrior} win!`)
-          setWinner('WINS!')
+          setWinner('Won!!!!')
           setScore(Score + 1)
         }
     }
@@ -94,7 +95,7 @@ function reset(){
         <Route exact path="/gladiator"> <Gladiators selectFighter={selectFighter}></Gladiators></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
-        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Results={Results} Winner={Winner} Score={Score} selectRandomWarrior={selectRandomWarrior}></FinalResults></Route>
+        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Fighttimes={Fighttimes} Winner={Winner} Score={Score} selectRandomWarrior={selectRandomWarrior}></FinalResults></Route>
         <Route component={Error404}></Route>
           </Switch>
       </div>

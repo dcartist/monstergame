@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import "../AnimationCheat/Animation.css"
 export default class Gladiator extends Component {
     constructor(props){
         super(props)
@@ -12,7 +13,7 @@ export default class Gladiator extends Component {
         let warriors = []
         for (let i = 0; i < 10; i++) {
             
-            warriors.push(<div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border"><img src={process.env.PUBLIC_URL + `/monsters/${i}.png`} alt={`Monster ${i}`} className="w-32"/> 
+            warriors.push(<div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border slideDown"><img src={process.env.PUBLIC_URL + `/monsters/${i}.png`} alt={`Monster ${i}`} className="w-32"/> 
             <p><Link to="/weapons"><button className="border br-black p-2 bg-black text-white" onClick={() =>this.props.selectFighter(i)}>Monster {i}</button></Link></p>
             </div>)
           }
@@ -23,6 +24,7 @@ export default class Gladiator extends Component {
 
         return (
         <div>
+            
             <h1 className="text-4xl font-light text-center"> SELECT YOUR MONSTER WARROR</h1>
             <div className="grid grid-cols-5">
            {this.warriorsCreate()}
