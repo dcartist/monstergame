@@ -14,7 +14,7 @@ function Fight(props) {
       <div><img src={process.env.PUBLIC_URL + `/monsters/${props.CompWarrior}.png`} alt={`Paper`} className="w-9/12"/> </div>
       </div>
        <p>  <Link to="/results"><button onClick={props.fight} className="p-3 border-black border"> FIGHT</button></Link> </p> 
-       {props.Results}
+      
     </div>
   )
    
