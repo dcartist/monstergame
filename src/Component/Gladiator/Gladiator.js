@@ -8,13 +8,19 @@ export default class Gladiator extends Component {
             number:10
         }
     }
-
+    
     warriorsCreate = () => {
         let warriors = []
         for (let i = 0; i < 10; i++) {
             
-            warriors.push(<div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border slideDown"><img src={process.env.PUBLIC_URL + `/monsters/${i}.png`} alt={`Monster ${i}`} className="w-32"/> 
-            <p><Link to="/weapons"><button className="border br-black p-2 bg-black text-white" onClick={() =>this.props.selectFighter(i)}>Monster {i}</button></Link></p>
+            warriors.push(<div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border slideDown">
+                <img src={process.env.PUBLIC_URL + `/monsters/${i}.png`} alt={`Monster ${i}`} className="w-32"/> 
+            <p>
+                <Link to="/weapons">
+                    <button className="border br-black p-2 bg-black text-white" onClick={() =>this.props.selectFighter(i)}>
+                    Monster {i}
+                    </button></Link>
+            </p>
             </div>)
           }
           return warriors
