@@ -5,6 +5,7 @@ import About from "./Component/About/About"
 import Fight from "./Component/Gladiator/Fight"
 import FinalResults from "./Component/Gladiator/Results"
 import Rules from "./Component/Rules/Rules"
+import Konami from "./Component/Konami/Konami"
 import Error404 from "./Error404"
 import Weapons from "./Component/Gladiator/Weapons"
 import { Route, Switch} from 'react-router-dom';
@@ -84,13 +85,14 @@ function reset(){
   }
   return (
     <div className="full-width">
-          <Navigation />
-          <p> Fight Times: {Fighttimes} || Score: {Score}</p>
+          {/* <Navigation /> */}
+          {/* <p> Fight Times: {Fighttimes} || Score: {Score}</p> */}
 
 <Switch>
 
         <Route exact path="/"><Home /></Route>
         <Route exact path="/about"><About /></Route>
+        <Route exact path="/konami"><Konami /></Route>
         <Route exact path="/rules"><Rules /></Route>
         <Route exact path="/gladiator"> <Gladiators selectFighter={selectFighter}></Gladiators></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
