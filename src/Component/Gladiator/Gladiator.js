@@ -13,7 +13,7 @@ export default class Gladiator extends Component {
         let warriors = []
         for (let i = 0; i < 10; i++) {
             
-            warriors.push(<div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border slideDown">
+            warriors.push(<div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border bigEntrance">
                 <img src={process.env.PUBLIC_URL + `/monsters/${i}.png`} alt={`Monster ${i}`} className="w-32"/> 
             <p>
                 <Link to="/weapons">
