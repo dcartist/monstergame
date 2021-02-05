@@ -85,8 +85,8 @@ function reset(){
   }
   return (
     <div className="full-width">
-          {/* <Navigation /> */}
-          {/* <p> Fight Times: {Fighttimes} || Score: {Score}</p> */}
+          <Navigation />
+          <p> Fight Times: {Fighttimes} || Score: {Score}</p>
 
 <Switch>
 
