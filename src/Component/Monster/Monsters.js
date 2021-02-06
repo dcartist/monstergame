@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import "../AnimationCheat/Animation.css"
-export default class Gladiator extends Component {
+export default class Monster extends Component {
     constructor(props){
         super(props)
         this.state={

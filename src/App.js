@@ -1,13 +1,13 @@
 import './App.css';
 import Home from "./Component/Home/Home"
-import Gladiators from "./Component/Gladiator/Gladiator"
+import Monsters from "./Component/Monster/Monster"
 import About from "./Component/About/About"
-import Fight from "./Component/Gladiator/Fight"
-import FinalResults from "./Component/Gladiator/Results"
+import Fight from "./Component/Monster/Fight"
+import FinalResults from "./Component/Monster/Results"
 import Rules from "./Component/Rules/Rules"
 import Konami from "./Component/Konami/Konami"
 import Error404 from "./Error404"
-import Weapons from "./Component/Gladiator/Weapons"
+import Weapons from "./Component/Monster/Weapons"
 import { Route, Switch} from 'react-router-dom';
 import Navigation from "./Component/Navigation/Navigation"
 import React, { useState } from 'react';
@@ -94,7 +94,7 @@ function reset(){
         <Route exact path="/about"><About /></Route>
         <Route exact path="/konami"><Konami /></Route>
         <Route exact path="/rules"><Rules /></Route>
-        <Route exact path="/gladiator"> <Gladiators selectFighter={selectFighter}></Gladiators></Route>
+        <Route exact path="/monster"> <Monsters selectFighter={selectFighter}></Monsters></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
         <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Winner={Winner} Score={Score} selectRandomWarrior={selectRandomWarrior} Fighttimes={Fighttimes} reset={reset}></FinalResults></Route>

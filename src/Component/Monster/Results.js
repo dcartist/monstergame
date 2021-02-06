@@ -18,7 +18,6 @@ function Results (props) {
 
     </div>
     </Fade>)
-
     useEffect(() => {
         console.log('I hope this works');
         setTimeout(() => {
@@ -44,7 +43,7 @@ function Results (props) {
            </div>
             
             
-            <p>  <Link to="/gladiator"><button onClick={props.reset} className="p-3 border-black border">  Fight Again! </button></Link></p>
+            <p>  <Link to="/monster"><button onClick={props.reset} className="p-3 border-black border">  Fight Again! </button></Link></p>
         </div>);
         }, 2400)
         
