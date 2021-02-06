@@ -8,12 +8,14 @@
   /* transform: rotate(90deg); */
   color: white;
   background-color: red;
-  width: 300px;
+  width: 85%;
+  margin: auto;
 
 
 }
 .MonsterImage {
-  z-index: 3!important;
+  /* z-index: 3!important; */
+  margin: auto;
 }
 .App-logo {
   height: 40vmin;

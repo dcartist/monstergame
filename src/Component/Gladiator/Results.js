@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 import Fade from 'react-reveal/Fade';
 
 function Results (props) {
+    const { width, height } = useWindowSize()
     const [showResults, setshowResults] = useState(<Fade  big top cascade><div><h2 className="fadeIn expandOpen text-5xl p-3">Rock</h2><h2 className="fadeIn expandOpen text-5xl p-3">Paper</h2><h2 className="fadeIn expandOpen text-5xl p-3">Scissors</h2><h2 className="fadeIn expandOpen text-5xl p-3">Shoot!</h2></div></Fade>)
 
     useEffect(() => {
         console.log('I hope this works');
         setTimeout(() => {
             setshowResults(    <div className="flex flex-row justify-center items-center flex-col">
+
+                {props.Winner === "Won!!!!"? <Confetti width={width} height={height}/> : <div></div>}
+                
             <h1 className="text-7xl text-red-600 font-black animate expandOpen mt-10"> You {props.Winner} </h1>
             <p className="text-lg">Score: {props.Score} || Fights: {props.Fighttimes}</p>
-           <div className="grid-cols-3 grid">
+           <div className="grid-cols-2 grid">
            <div>
             <div className="flex flex-row">
             <div><img src={process.env.PUBLIC_URL + `/monsters/${props.UserWarrior}.png`} alt={`Monster`} className="h-48"/> </div>
