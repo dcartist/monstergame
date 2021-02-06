@@ -9,10 +9,8 @@ function Results (props) {
         console.log('I hope this works');
         setTimeout(() => {
             setshowResults(    <div className="flex flex-row justify-center items-center flex-col">
-            <h1 className="text-7xl text-red-700 font-black animate expandOpen "> You {props.Winner} </h1>
-           <p>{props.Fighttimes}</p>
-            
-            <p> Score: {props.Score}</p>
+            <h1 className="text-7xl text-red-600 font-black animate expandOpen mt-10"> You {props.Winner} </h1>
+            <p className="text-lg">Score: {props.Score} || Fights: {props.Fighttimes}</p>
            <div className="grid-cols-3 grid">
            <div>
             <div className="flex flex-row">
@@ -20,7 +18,7 @@ function Results (props) {
                 <div><img src={process.env.PUBLIC_URL + `/weapons/${props.UserweaponSelect}.png`} alt={`Weapon`} className="h-28"/> </div>
                 </div>
             </div>
-            <div></div>
+            
            <div>
             <div className="flex flex-row"><div><img src={process.env.PUBLIC_URL + `/weapons/${props.CompWeapon}.png`} alt={`Weapon`} className="h-28"/> </div>
              <div><img src={process.env.PUBLIC_URL + `/monsters/${props.CompWarrior}.png`} alt={`Monster`} className="h-48"/> </div></div>

@@ -86,7 +86,7 @@ function reset(){
   return (
     <div className="full-width">
           <Navigation />
-          <p> Fight Times: {Fighttimes} || Score: {Score}</p>
+          
 
 <Switch>
 
@@ -97,7 +97,7 @@ function reset(){
         <Route exact path="/gladiator"> <Gladiators selectFighter={selectFighter}></Gladiators></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
-        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Winner={Winner} Score={Score} selectRandomWarrior={selectRandomWarrior}></FinalResults></Route>
+        <Route exact path="/results"> <FinalResults CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect} Winner={Winner} Score={Score} selectRandomWarrior={selectRandomWarrior} Fighttimes={Fighttimes} reset={reset}></FinalResults></Route>
         <Route component={Error404}></Route>
           </Switch>
       </div>

@@ -8,6 +8,7 @@ class Navigation extends Component {
                 <Link to="/about">About</Link>
                 <Link to="/gladiator">Gladiator</Link>
                 <Link to="/weapons">Weapons</Link>
+                <Link to="/fight">Fight</Link>
                 <Link to="/rules">Rules</Link>
             </div>
         );

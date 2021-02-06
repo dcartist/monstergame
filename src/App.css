@@ -1,7 +1,20 @@
 .App {
   text-align: center;
 }
+.SelectedMonster {
+  position: relative;
+}
+.MonsterTitle{
+  /* transform: rotate(90deg); */
+  color: white;
+  background-color: red;
+  width: 300px;
 
+
+}
+.MonsterImage {
+  z-index: 3!important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
