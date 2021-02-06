@@ -75,8 +75,8 @@ slideDown
 }
 
 .slideDownDelay{
-	animation-name: slideDown;
-	-webkit-animation-name: slideDown;	
+	animation-name: slideDownDelay;
+	-webkit-animation-name: slideDownDelay;	
 	animation-delay: 1s;
 	animation-duration: 1s;	
 	-webkit-animation-duration: 1s;
@@ -87,7 +87,7 @@ slideDown
 	visibility: visible !important;						
 }
 
-@keyframes slideDown {
+@keyframes slideDownDelay {
 	0% {
 		transform: translateY(-100%);
 	}
@@ -108,7 +108,7 @@ slideDown
 	}		
 }
 
-@-webkit-keyframes slideDown {
+@-webkit-keyframes slideDownDelay {
 	0% {
 		-webkit-transform: translateY(-100%);
 	}
