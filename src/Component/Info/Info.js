@@ -3,25 +3,39 @@ import React, { Component } from 'react';
 class Rules extends Component {
     render() {
         return (
-            <div>
+            <div className="Info">
                 <h2>About Monster Arena</h2>
                 <p>This app is based on the game rock paper scissors.</p>
                 <h2>Instructions</h2>
-                <ul>
+                <ol className="list-decimal">
                     <li>The user selects a monster.</li>
                     <li>The user selects a weapon for the user's monster.</li>
                     <li>The computer chooses the user's opponent. </li>
                     <li>Select the "fight" option.</li>
                     <li>View the results</li>
+                </ol>
+                <h3>The Conditions to win</h3>
+                <ul>
+                    <li>Scissors beats Paper</li>
+                    <li>Rock beats Scissors</li>
+                    <li>Paper beats Rock</li>
                 </ul>
-                <h3>The Wepons</h3>
-                <div>
+
+                <h3>The Weapons</h3>
+                <div className="InfoWeapons">
+                    <div>
+                        <p>Scissors</p>
                 <img src={process.env.PUBLIC_URL + `/weapons/3.png`} alt={`Scissors`} className="monsterWeaponImage" />
+                    </div>
+                    <div>
+                        <p>Paper</p>
                 <img src={process.env.PUBLIC_URL + `/weapons/2.png`} alt={`Scissors`} className="monsterWeaponImage" />
+                    </div>
+                    <div>
+                        <p>Rock</p>
                 <img src={process.env.PUBLIC_URL + `/weapons/1.png`} alt={`Scissors`} className="monsterWeaponImage" />
+                    </div>
                 </div>
-                <h3>The Wepons</h3>
-                <h2>Project</h2>
 
                 <h2>History of Rock Paper Scissors</h2>
 
