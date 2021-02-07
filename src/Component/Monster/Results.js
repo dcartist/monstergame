@@ -26,7 +26,9 @@ function Results (props) {
                 {props.Winner === "Won!!!!"? <Confetti width={width} height={height}/> : <div></div>}
                 
             <h1 className="text-7xl text-red-500 font-black animate expandOpen mt-10"> You {props.Winner} </h1>
+            <p>{props.Details}</p>
             <p className="text-lg">Score: {props.Score} || Fights: {props.Fighttimes}</p>
+           
            <div className="grid-cols-2 grid">
            <div>
             <div className="flex flex-row">
