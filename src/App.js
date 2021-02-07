@@ -1,10 +1,9 @@
 import './App.css';
 import Home from "./Component/Home/Home"
 import Monsters from "./Component/Monster/Monsters"
-import About from "./Component/About/About"
 import Fight from "./Component/Monster/Fight"
 import FinalResults from "./Component/Monster/Results"
-import Rules from "./Component/Rules/Rules"
+import Info from "./Component/Info/Info"
 import Konami from "./Component/Konami/Konami"
 import Error404 from "./Error404"
 import Weapons from "./Component/Monster/Weapons"
@@ -98,9 +97,8 @@ function reset(){
 <Switch>
 
         <Route exact path="/"><Home /></Route>
-        <Route exact path="/about"><About /></Route>
         <Route exact path="/konami"><Konami /></Route>
-        <Route exact path="/rules"><Rules /></Route>
+        <Route exact path="/info"><Info /></Route>
         <Route exact path="/monster"> <Monsters selectFighter={selectFighter}></Monsters></Route>
         <Route exact path="/fight"> <Fight fight={fight} Results={Results} CompWarrior={CompWarrior} CompWeapon={CompWeapon} UserWarrior={UserWarrior} UserweaponSelect={UserweaponSelect}></Fight></Route>
         <Route exact path="/weapons"> <Weapons setUserWeapon={setUserWeapon}></Weapons></Route>
