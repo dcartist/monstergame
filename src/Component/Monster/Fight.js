@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 function Fight(props) {
   
