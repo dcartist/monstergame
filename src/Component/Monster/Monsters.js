@@ -13,7 +13,7 @@ export default class Monster extends Component {
         let warriors = []
         for (let i = 0; i < 10; i++) {
             
-            warriors.push( <Link to="/weapons"><div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border bigEntrance">
+            warriors.push( <Link to="/weapons" onClick={() =>this.props.selectFighter(i)}><div className="flex flex-col items-center p-3 justify-center shadow-lg m-4 border bigEntrance">
                 <img src={process.env.PUBLIC_URL + `/monsters/${i}.png`} alt={`Monster ${i}`} className="w-48"/> 
             <p>
                 <Link to="/weapons">

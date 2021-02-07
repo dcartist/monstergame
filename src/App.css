@@ -85,6 +85,41 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.ResultsList{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.ResultsCardLeft{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 60% 40%;
+}
+.ResultsCardRight{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 40% 60%;
+}
+.ResultsMonster{
+width: 100%;
+
+}
+.ResultsWeapon{
+width: 100%;
+}
+
+.ResultsHeader{
+margin-top: 5px;
+}
+
+.FightAgain{
+font-size: 1.2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Extra Small                                */
+/* -------------------------------------------------------------------------- */
+
+
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
@@ -148,7 +183,34 @@ html, body {
     margin-top: 20px;
     font-size: 35px;
   }
+
+  .ResultsList{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+  }
+  .ResultsCardLeft{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+  }
+  .ResultsCardRight{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+  }
+  .ResultsMonster{
+  width: 100%;
+
+  }
+  .ResultsWeapon{
+  width: 100%;
+  }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                Small Device                                */
+/* -------------------------------------------------------------------------- */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
@@ -200,8 +262,33 @@ html, body {
     font-size: 35px;
     width: 85%;
   }
- 
+  .ResultsList{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 75%;
+  }
+  .ResultsCardLeft{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+  }
+  .ResultsCardRight{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+  }
+  .ResultsMonster{
+  width: 100%;
+
+  }
+  .ResultsWeapon{
+  width: 100%;
+  }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                Medium Device                               */
+/* -------------------------------------------------------------------------- */
 
 /* Medium devices (landscape tablets, 768px and up) */
 
@@ -266,7 +353,33 @@ html, body {
     margin: auto;
     font-size: 40px;
   }
+  .ResultsList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+  }
+  .ResultsCardLeft{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+  }
+  .ResultsCardRight{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+  }
+  .ResultsMonster{
+  width: 100%;
+
+  }
+  .ResultsWeapon{
+  width: 100%;
+  }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                Large Device                                */
+/* -------------------------------------------------------------------------- */
 
 /* Large devices (laptops/desktops, 992px and up) */
 
@@ -324,5 +437,27 @@ html, body {
     width: 95%;
     margin: auto;
     font-size: 45px;
+  }
+  .ResultsList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+  .ResultsCardLeft{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+  }
+  .ResultsCardRight{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+  }
+  .ResultsMonster{
+  width: 100%;
+
+  }
+  .ResultsWeapon{
+  width: 100%;
   }
 }

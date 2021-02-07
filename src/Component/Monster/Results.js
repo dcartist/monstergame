@@ -24,42 +24,42 @@ function Results (props) {
             setshowResults(<div className="flex flex-row justify-center items-center flex-col">
 
                 {props.Winner === "Won!!!!"? <Confetti width={width} height={height}/> : <div></div>}
-                
-            <h1 className="text-7xl text-red-500 font-black animate expandOpen mt-10"> You {props.Winner} </h1>
+            <h1 className="text-7xl text-red-500 font-black animate expandOpen ResultsHeader"> You {props.Winner} </h1>
             <p>{props.Details}</p>
             <p className="text-lg">Score: {props.Score} || Fights: {props.Fighttimes}</p>
-           
-           <div className="grid-cols-2 grid">
-           <div>
+            <p>  <Link to="/monster"><button onClick={props.reset} className="p-3 border-black border bg-black text-white FightAgain">  Fight Again! </button></Link></p>
+
+           <div className="ResultsList">
+           <div className="shadow-lg m-3">
 
       <div className="MonsterTitleResults items-center justify-center"> <p className="p-1 text-center">YOU</p>  </div>
-            <div className="flex flex-row">
-            <div><img src={process.env.PUBLIC_URL + `/monsters/${props.UserWarrior}.png`} alt={`Monster`} className="h-48"/> </div>
-                <div><img src={process.env.PUBLIC_URL + `/weapons/${props.UserweaponSelect}.png`} alt={`Weapon`} className="h-28"/> </div>
+            <div className="ResultsCardLeft">
+            <img src={process.env.PUBLIC_URL + `/monsters/${props.UserWarrior}.png`} alt={`Monster`} className="ResultsMonster"/>
+            <img src={process.env.PUBLIC_URL + `/weapons/${props.UserweaponSelect}.png`} alt={`Weapon`} className="ResultsWeapon"/>
                 </div>
             </div>
-            
-           <div>
+
+           <div className="shadow-lg m-3">
 
       <div className="MonsterTitleResults items-center justify-center"> <p className="p-1 text-center">Computer</p>  </div>
-            <div className="flex flex-row"><div><img src={process.env.PUBLIC_URL + `/weapons/${props.CompWeapon}.png`} alt={`Weapon`} className="h-28"/> </div>
-             <div><img src={process.env.PUBLIC_URL + `/monsters/${props.CompWarrior}.png`} alt={`Monster`} className="h-48"/> </div></div>
-            </div>
+            <div className="ResultsCardRight">
+            <img src={process.env.PUBLIC_URL + `/weapons/${props.CompWeapon}.png`} alt={`Weapon`} className="ResultsWeapon"/>
+            <img src={process.env.PUBLIC_URL + `/monsters/${props.CompWarrior}.png`} alt={`Monster`} className="ResultsMonster"/>
 
+            </div>
+            </div>
            </div>
-            
-            
-            <p>  <Link to="/monster"><button onClick={props.reset} className="p-3 border-black border">  Fight Again! </button></Link></p>
+
         </div>);
         }, 2400)
-        
+
       }, []);
     return (
         <div className="flex flex-row justify-center items-center flex-col">
            {showResults}
         </div>
     );
-    
+
 }
 
 export default Results;
