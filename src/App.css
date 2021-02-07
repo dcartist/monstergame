@@ -1,6 +1,35 @@
-.App {
-  text-align: center;
+.root{
+  min-height: 100vh;
+  /* display: flex; */
 }
+
+.homeSection{
+  height: 80vh;
+  overflow:hidden;
+  overflow-y: hidden !important;
+}
+html, body {
+  height: 100vh;
+
+}
+
+.MonsterButton{
+font-size: 2rem;
+height: 4rem;
+/* line-height: 1; */
+}
+
+.navigation{
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation li {
+  display: inline;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
 .SelectedMonster {
   position: relative;
 }
@@ -83,7 +112,7 @@ width: auto;
     display: none;
     }
   .MonsterIntroMobile Img{
-    width: auto;
+    width: 90vw;
     /* display: none; */
     }
   

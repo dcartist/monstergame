@@ -84,10 +84,8 @@ function reset(){
     }
   }
   return (
-    <div className="full-width flex-1">
+    <div className="m-0 p-0">
           <Navigation />
-          
-
 <Switch>
 
         <Route exact path="/"><Home /></Route>
