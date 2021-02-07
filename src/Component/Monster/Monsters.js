@@ -32,7 +32,7 @@ export default class Monster extends Component {
         <div>
             
             <h1 className="text-4xl font-light text-center"> SELECT YOUR MONSTER WARROR</h1>
-            <div className="flex flex-wrap">
+            <div className="MonsterList">
            {this.warriorsCreate()}
            </div>
 

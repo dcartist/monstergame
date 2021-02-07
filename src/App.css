@@ -1,20 +1,17 @@
-.root{
+.root {
   min-height: 100vh;
   /* display: flex; */
 }
 
-.homeSection{
-  height: 80vh;
-  overflow:hidden;
-  overflow-y: hidden !important;
+.homeSection {
   width: 100vw;
 }
+
 html, body {
   height: 100vh;
-
 }
 
-.navigation{
+.navigation {
   display: flex;
   flex-direction: column;
 }
@@ -22,135 +19,115 @@ html, body {
 .navigation li {
   display: inline;
   padding: 5px;
-  font-size: 1.5rem;
+  margin-right: 3px;
+  font-size: 1.2rem;
 }
 
 .SelectedMonster {
   position: relative;
 }
-.MonsterTitle{
-  /* transform: rotate(90deg); */
+
+.MonsterTitle {
   color: white;
   background-color: red;
   width: 85%;
   margin: auto;
-
-
 }
 
-.MonsterButton{
+.MonsterButton {
   font-size: 2rem;
   height: 4rem;
   /* line-height: 1; */
-  }
+}
 
 .MonsterImage {
   /* z-index: 3!important; */
   margin: auto;
 }
 
-.MonsterIntro{
-/* width: 100vw; */
-display: block;
-}
-.MonsterIntro img{
-/* width: 40%; */
-height: 400px;
-
+.MonsterIntro {
+  /* width: 100vw; */
+  display: block;
 }
 
-.MonsterIntroMobile{
+.MonsterIntro img {
+  /* width: 40%; */
+  height: 400px;
+}
+
+.MonsterIntroMobile {
   display: none;
 }
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.MonsterList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-
 
 /* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
   .MonsterImage {
-    /* z-index: 3!important; */
     margin: auto;
     width: 80vw;
   }
-  .MonsterIntroMobile{
+  .MonsterIntroMobile {
     display: block;
   }
   .MonsterIntro {
     /* width: auto; */
     display: none;
-    }
-  .MonsterIntroMobile Img{
-    width: 90vw;
+  }
+  .MonsterIntroMobile Img {
+    width: 70%;
     /* display: none; */
-    }
-  
+  }
+  .MonsterIntro Img:last-child {
+    display: block;
+  }
+  .MonsterList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+
 @media only screen and (min-width: 600px) {
   .MonsterImage {
-    /* z-index: 3!important; */
     margin: auto;
     width: 80vw;
   }
-  .MonsterIntroMobile{
+  .MonsterIntroMobile {
     display: block;
   }
   .MonsterIntro {
-    /* width: auto; */
     display: none;
-    }
-  .MonsterIntroMobile Img{
+    flex-direction: row;
+    width: 100vw;
+  }
+  .MonsterIntroMobile Img {
     width: auto;
+    width: 50%;
     /* display: none; */
-    }
-  
+  }
+  .MonsterIntro Img:last-child {
+    display: none;
+  }
+  .MonsterList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
   .MonsterImage {
-    
     margin: auto;
     width: 80%;
   }
-  .MonsterIntroMobile{
+  .MonsterIntroMobile {
     display: none;
   }
   .MonsterIntro {
@@ -159,19 +136,56 @@ height: 400px;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100vw;
-    }
-  .MonsterIntro Img{
-   width: 80rem;
-   /* width: 30%; */
-   /* height: 300px; */
-   padding: 0%;
-   margin: 0;
-   column-gap: 0;
-    }
- 
+  }
+  .MonsterIntro Img {
+    width: 80rem;
+    padding: 0%;
+    margin: 0;
+    column-gap: 0;
+  }
+  .MonsterIntro Img:nth-last-child(2) {
+    display: none;
+  }
+  .MonsterIntro Img:last-child {
+    display: none;
+  }
+  .MonsterList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
-  
+  .MonsterImage {
+    margin: auto;
+    width: 80%;
+  }
+  .MonsterIntroMobile {
+    display: none;
+  }
+  .MonsterIntro {
+    /* width: auto; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+  }
+  .MonsterIntro Img {
+    width: 80rem;
+    padding: 0%;
+    margin: 0;
+    column-gap: 0;
+  }
+  .MonsterIntro Img:last-child {
+    display: block;
+  }
+  .MonsterIntro Img:nth-last-child(2) {
+    display: block;
+  }
+  .MonsterList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
