@@ -32,6 +32,7 @@ html, body {
   background-color: red;
   width: 85%;
   margin: auto;
+  font-size: 55px;
 }
 
 .MonsterButton {
@@ -63,13 +64,22 @@ html, body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
+.MonsterWeapon{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.MonsterFight{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
   .MonsterImage {
     margin: auto;
-    width: 80vw;
+    width: 70vw;
   }
   .MonsterIntroMobile {
     display: block;
@@ -88,6 +98,22 @@ html, body {
   .MonsterList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .MonsterWeapon{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .MonsterFight{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .MonsterTitle {
+    color: white;
+    background-color: red;
+    /* width: 85%; */
+    margin: auto;
+    margin-top: 20px;
+    font-size: 35px;
   }
 }
 
@@ -118,6 +144,22 @@ html, body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .MonsterWeapon{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .MonsterFight{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .MonsterTitle {
+    color: white;
+    background-color: red;
+    width: 85%;
+    margin: auto;
+    font-size: 35px;
+  }
+ 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -152,6 +194,26 @@ html, body {
   .MonsterList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+   justify-items: center;
+  }
+  .MonsterFight{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+   justify-items: center;
+  }
+
+  .MonsterWeapon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .MonsterTitle {
+    color: white;
+    background-color: red;
+    width: 95%;
+    margin: auto;
+    font-size: 40px;
   }
 }
 
@@ -187,5 +249,20 @@ html, body {
   .MonsterList {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+  }
+  .MonsterFight{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .MonsterWeapon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .MonsterTitle {
+    color: white;
+    background-color: red;
+    width: 95%;
+    margin: auto;
+    font-size: 55px;
   }
 }
