@@ -7,16 +7,11 @@
   height: 80vh;
   overflow:hidden;
   overflow-y: hidden !important;
+  width: 100vw;
 }
 html, body {
   height: 100vh;
 
-}
-
-.MonsterButton{
-font-size: 2rem;
-height: 4rem;
-/* line-height: 1; */
 }
 
 .navigation{
@@ -42,17 +37,26 @@ height: 4rem;
 
 
 }
+
+.MonsterButton{
+  font-size: 2rem;
+  height: 4rem;
+  /* line-height: 1; */
+  }
+
 .MonsterImage {
   /* z-index: 3!important; */
   margin: auto;
 }
 
 .MonsterIntro{
-width: 100vw;
+/* width: 100vw; */
 display: block;
 }
 .MonsterIntro img{
-width: auto;
+/* width: 40%; */
+height: 400px;
+
 }
 
 .MonsterIntroMobile{
@@ -154,12 +158,12 @@ width: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 99vw;
+    width: 100vw;
     }
   .MonsterIntro Img{
-   /* width: 40rem; */
+   width: 80rem;
    /* width: 30%; */
-   height: 300px;
+   /* height: 300px; */
    padding: 0%;
    margin: 0;
    column-gap: 0;
