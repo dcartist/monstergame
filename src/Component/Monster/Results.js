@@ -21,7 +21,7 @@ function Results (props) {
     useEffect(() => {
         console.log('I hope this works');
         setTimeout(() => {
-            setshowResults(    <div className="flex flex-row justify-center items-center flex-col">
+            setshowResults(<div className="flex flex-row justify-center items-center flex-col">
 
                 {props.Winner === "Won!!!!"? <Confetti width={width} height={height}/> : <div></div>}
                 
@@ -31,6 +31,8 @@ function Results (props) {
            
            <div className="grid-cols-2 grid">
            <div>
+
+      <div className="MonsterTitleResults items-center justify-center"> <p className="p-1 text-center">YOU</p>  </div>
             <div className="flex flex-row">
             <div><img src={process.env.PUBLIC_URL + `/monsters/${props.UserWarrior}.png`} alt={`Monster`} className="h-48"/> </div>
                 <div><img src={process.env.PUBLIC_URL + `/weapons/${props.UserweaponSelect}.png`} alt={`Weapon`} className="h-28"/> </div>
@@ -38,6 +40,8 @@ function Results (props) {
             </div>
             
            <div>
+
+      <div className="MonsterTitleResults items-center justify-center"> <p className="p-1 text-center">Computer</p>  </div>
             <div className="flex flex-row"><div><img src={process.env.PUBLIC_URL + `/weapons/${props.CompWeapon}.png`} alt={`Weapon`} className="h-28"/> </div>
              <div><img src={process.env.PUBLIC_URL + `/monsters/${props.CompWarrior}.png`} alt={`Monster`} className="h-48"/> </div></div>
             </div>
