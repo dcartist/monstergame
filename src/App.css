@@ -17,6 +17,19 @@
   /* z-index: 3!important; */
   margin: auto;
 }
+
+.MonsterIntro{
+width: 100vw;
+display: block;
+}
+.MonsterIntro img{
+width: auto;
+}
+
+.MonsterIntroMobile{
+  display: none;
+}
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -50,4 +63,82 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .MonsterImage {
+    /* z-index: 3!important; */
+    margin: auto;
+    width: 80vw;
+  }
+  .MonsterIntroMobile{
+    display: block;
+  }
+  .MonsterIntro {
+    /* width: auto; */
+    display: none;
+    }
+  .MonsterIntroMobile Img{
+    width: auto;
+    /* display: none; */
+    }
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .MonsterImage {
+    /* z-index: 3!important; */
+    margin: auto;
+    width: 80vw;
+  }
+  .MonsterIntroMobile{
+    display: block;
+  }
+  .MonsterIntro {
+    /* width: auto; */
+    display: none;
+    }
+  .MonsterIntroMobile Img{
+    width: auto;
+    /* display: none; */
+    }
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .MonsterImage {
+    
+    margin: auto;
+    width: 80%;
+  }
+  .MonsterIntroMobile{
+    display: none;
+  }
+  .MonsterIntro {
+    /* width: auto; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 99vw;
+    }
+  .MonsterIntro Img{
+   /* width: 40rem; */
+   /* width: 30%; */
+   height: 300px;
+   padding: 0%;
+   margin: 0;
+   column-gap: 0;
+    }
+ 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
 }

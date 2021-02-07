@@ -1,6 +1,6 @@
 import './App.css';
 import Home from "./Component/Home/Home"
-import Monsters from "./Component/Monster/Monster"
+import Monsters from "./Component/Monster/Monsters"
 import About from "./Component/About/About"
 import Fight from "./Component/Monster/Fight"
 import FinalResults from "./Component/Monster/Results"
@@ -84,7 +84,7 @@ function reset(){
     }
   }
   return (
-    <div className="full-width">
+    <div className="full-width flex-1">
           <Navigation />
           
 
