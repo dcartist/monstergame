@@ -13,7 +13,7 @@ class Rules extends Component {
                     <li>Portfolio: <a href="https://dcartist.studio/" target="_blank">dcartist.studio</a></li>
                 </ul>
                 <h2>Instructions</h2>
-                <ul className="Instructions">
+                <ul className=" Instructions">
                     <li>The user selects a monster.</li>
                     <li>The user selects a weapon for the user's monster.</li>
                     <li>The computer chooses the user's opponent. </li>
