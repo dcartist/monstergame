@@ -24,13 +24,13 @@ function Results (props) {
             setshowResults(<div className="flex flex-row justify-center items-center flex-col">
 
                 {props.Winner === "Won!!!!"? <Confetti width={width} height={height}/> : <div></div>}
-            <h1 className="text-7xl text-red-500 font-black animate expandOpen ResultsHeader"> You {props.Winner} </h1>
+            <h1 className="text-6xl text-red-500 font-black animate expandOpen ResultsHeader"> You {props.Winner} </h1>
             <p>{props.Details}</p>
             <p className="text-lg">Score: {props.Score} || Fights: {props.Fighttimes}</p>
             <p>  <Link to="/monster"><button onClick={props.reset} className="p-3 border-black border bg-black text-white FightAgain">  Fight Again! </button></Link></p>
 
            <div className="ResultsList">
-           <div className="shadow-lg m-3">
+           <div className="shadow-lg m-2">
 
       <div className="MonsterTitleResults items-center justify-center"> <p className="p-1 text-center">YOU</p>  </div>
             <div className="ResultsCardLeft">
@@ -39,7 +39,7 @@ function Results (props) {
                 </div>
             </div>
 
-           <div className="shadow-lg m-3">
+           <div className="shadow-lg m-2">
 
       <div className="MonsterTitleResults items-center justify-center"> <p className="p-1 text-center">Computer</p>  </div>
             <div className="ResultsCardRight">

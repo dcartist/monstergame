@@ -5,23 +5,28 @@
 
 .homeSection {
   width: 100vw;
+  height: 80vh;
 }
 
 html, body {
   height: 100vh;
   font-size: 17px;
+  padding: 15px;
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
   font-weight: 800;
+  border-bottom: 1px black solid;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .navigation li {
   display: inline;
   padding: 5px;
-  margin-right: 3px;
+  margin-right: 2rem;
   font-size: 1.2rem;
 }
 
@@ -56,10 +61,27 @@ html, body {
 }
 
 .MonsterIntro {
-  /* width: 100vw; */
-  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+
+.MonsterMain{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+.MonsterMain div{
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  /* display: block; */
+}
 .MonsterIntro img {
   /* width: 40%; */
   height: 400px;
@@ -122,6 +144,7 @@ font-size: 1.2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: auto;
+  padding-bottom: 10px;
 }
 .InfoWeapons Img{
   width: 100%;
@@ -136,21 +159,27 @@ font-size: 1.2rem;
   margin: auto;
   font-size: 35px;
   font-weight: 700;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .Info h3{
   text-align: center;
   margin: auto;
   font-size: 25px;
   font-weight: 700;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .Info ol{
   margin: 0 30%;
 }
-
+.Info ol>li:last-child, ol>li:last-child{
+  padding-bottom: 10px;
+}
 .Info ul>li{
   text-align: center;
+  padding-bottom: 10px;
+}
+
+.Info ol>li{
   padding-bottom: 10px;
 }
 .Info ul{
@@ -159,6 +188,10 @@ font-size: 1.2rem;
 
 .Info {
   padding: 30px;
+}
+.Info a {
+  font-weight: 700;
+  color: red;
 }
 .Info p {
   margin: 0 20%;
@@ -255,6 +288,9 @@ font-size: 1.2rem;
   .ResultsWeapon{
   width: 100%;
   }
+  .MonsterMain{
+    display: none;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -273,9 +309,11 @@ font-size: 1.2rem;
   }
   .MonsterIntro {
     display: none;
-    flex-direction: row;
-    width: 100vw;
   }
+  .MonsterMain{
+    display: none;
+  }
+
   .MonsterIntroMobile Img {
     width: auto;
     width: 50%;
@@ -509,4 +547,9 @@ font-size: 1.2rem;
   .ResultsWeapon{
   width: 100%;
   }
+
+.MonsterMain{
+  display: flex;
+  flex-direction: row !important;
+}
 }

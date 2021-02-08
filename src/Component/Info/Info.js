@@ -8,8 +8,9 @@ class Rules extends Component {
                 <p>Based on the game rock paper scissors, Monster Arena is a react app built by Paula Bannerman developed over 7 days for the Vercel & Hashnode Hackathon. She also created the monsters and weapons art. To view the overview of the journey of creating this app, please visit this link:</p>
                 <ul>
                     <li>Email: <a href="mailto:Pbannerman13@gmail.com" target="_blank">Pbannerman13@gmail.com</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/dcartist/" target="_blank">linkedin.com/in/dcartist</a></li>
                     <li>Github: <a href="https://github.com/dcartist" target="_blank">github.com/dcartist</a></li>
-                    <li>Portfolio: <a href="https://dcartist.studio/" target="_blank">Dcartist.studio</a></li>
+                    <li>Portfolio: <a href="https://dcartist.studio/" target="_blank">dcartist.studio</a></li>
                 </ul>
                 <h2>Instructions</h2>
                 <ol className="list-decimal">
