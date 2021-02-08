@@ -13,7 +13,7 @@ function Fight(props) {
       <img src={process.env.PUBLIC_URL + `/monsters/${props.UserWarrior}.png`} alt={`Monster`} className="MonsterImage"/> 
       </div>
 
-      <div className="text-center flex-grow"><h1 className="text-7xl p-14">VS.</h1> <p>  <Link to="/results"><button onClick={props.fight} className="p-3 border-black border w-40 text-2xl shadow-xl"> FIGHT</button></Link> </p> </div>
+      <div className="text-center flex-grow"><h1 className="text-7xl p-14">VS.</h1> <p>  <Link to="/results"><button onClick={props.fight} className="p-3 border-black border w-40 text-2xl shadow-xl bg-black text-white"> FIGHT</button></Link> </p> </div>
      
 
      
