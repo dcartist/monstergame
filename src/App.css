@@ -207,6 +207,17 @@ text-align: center;
 /* color: red; */
 
 }
+
+.smallText{
+  font-size: 9px;
+  z-index: 10;
+  padding: .25em;
+  position: fixed;
+  top: 25;
+  left: 0;
+  transform-origin: top left;
+  transform: translateY(100%) rotate(-90deg);
+}
 /* -------------------------------------------------------------------------- */
 /*                                 Extra Small                                */
 /* -------------------------------------------------------------------------- */
@@ -442,10 +453,10 @@ text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100vw;
+    width: 95vw;
   }
   .MonsterIntro Img {
-    width: 80rem;
+    width: 75rem;
     padding: 0%;
     margin: 0;
     column-gap: 0;
@@ -544,10 +555,10 @@ text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100vw;
+    width: 95vw;
   }
   .MonsterIntro Img {
-    width: 80rem;
+    width: 75rem;
     padding: 0%;
     margin: 0;
     column-gap: 0;
