@@ -10,7 +10,7 @@
 
 html, body {
   height: 100vh;
-  font-size: 17px;
+  font-size: 16px;
   padding: 15px;
 }
 
@@ -168,9 +168,7 @@ font-size: 1.2rem;
   font-weight: 700;
   padding-bottom: 20px;
 }
-.Info ol{
-  margin: 0 30%;
-}
+
 .Info ol>li:last-child, ol>li:last-child{
   padding-bottom: 10px;
 }
@@ -196,6 +194,10 @@ font-size: 1.2rem;
 .Info p {
   margin: 0 20%;
   padding-bottom: 20px;
+}
+
+.Info ol{
+  margin: 0 30%;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 Extra Small                                */
@@ -291,6 +293,24 @@ font-size: 1.2rem;
   .MonsterMain{
     display: none;
   }
+  .Info p {
+    margin: 0 2px;
+    padding-bottom: 20px;
+  }
+  
+  .Info ol{
+    margin: 0 4px;
+  }
+  .InfoWeapons{
+    /* width: 500px; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin: auto; */
+    padding-bottom: 10px;
+  }
+  .InfoWeapons Img{
+    width: 50%;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -370,6 +390,24 @@ font-size: 1.2rem;
   }
   .ResultsWeapon{
   width: 100%;
+  }
+  .Info p {
+    margin: 0 2px;
+    padding-bottom: 20px;
+  }
+  
+  .Info ol{
+    margin: 0 4px;
+  }
+  .InfoWeapons{
+    /* width: 500px; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin: auto; */
+    padding-bottom: 10px;
+  }
+  .InfoWeapons Img{
+    width: 50%;
   }
 }
 
