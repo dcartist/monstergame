@@ -5,7 +5,7 @@ class Rules extends Component {
         return (
             <div className="Info">
                 <h2>About Monster Arena</h2>
-                <p>Based on the game rock paper scissors, Monster Arena is a react app built by Paula Bannerman developed over 7 days for the Vercel & Hashnode Hackathon. She also created the monsters and weapons art. To view the overview of the journey of creating this app, please visit this link:</p>
+                <p>Based on the game rock paper scissors, Monster Arena is a react app built by Paula Bannerman developed over 7 days for the Vercel & Hashnode Hackathon. She also created the monsters and weapons art. To view the overview of the journey of creating this app, please visit this link: <a href="https://dcartist.hashnode.dev/1-project-in-7-days" target="_blank">https://dcartist.hashnode.dev/1-project-in-7-days</a></p>
                 <ul>
                     <li>Email: <a href="mailto:Pbannerman13@gmail.com" target="_blank">Pbannerman13@gmail.com</a></li>
                     <li>LinkedIn: <a href="https://www.linkedin.com/in/dcartist/" target="_blank">linkedin.com/in/dcartist</a></li>
@@ -13,13 +13,13 @@ class Rules extends Component {
                     <li>Portfolio: <a href="https://dcartist.studio/" target="_blank">dcartist.studio</a></li>
                 </ul>
                 <h2>Instructions</h2>
-                <ol className="list-decimal">
+                <ul className="Instructions">
                     <li>The user selects a monster.</li>
                     <li>The user selects a weapon for the user's monster.</li>
                     <li>The computer chooses the user's opponent. </li>
                     <li>Select the "fight" option.</li>
                     <li>View the results</li>
-                </ol>
+                </ul>
                 <h3>The Conditions to win</h3>
                 <ul>
                     <li>Scissors beats Paper</li>

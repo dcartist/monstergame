@@ -199,6 +199,14 @@ font-size: 1.2rem;
 .Info ol{
   margin: 0 30%;
 }
+
+.Info ol>li{
+/* width: 50vw; */
+/* margin: auto; */
+text-align: center;
+/* color: red; */
+
+}
 /* -------------------------------------------------------------------------- */
 /*                                 Extra Small                                */
 /* -------------------------------------------------------------------------- */
@@ -306,6 +314,8 @@ font-size: 1.2rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     /* margin: auto; */
+
+  text-align: center;
     padding-bottom: 10px;
   }
   .InfoWeapons Img{
@@ -404,6 +414,8 @@ font-size: 1.2rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     /* margin: auto; */
+
+  text-align: center;
     padding-bottom: 10px;
   }
   .InfoWeapons Img{
@@ -500,6 +512,17 @@ font-size: 1.2rem;
   .ResultsWeapon{
   width: 100%;
   }
+  .InfoWeapons{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* margin: auto; */
+    padding-bottom: 10px;
+  text-align: center;
+  }
+  .InfoWeapons Img{
+    width: 80%;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -589,5 +612,16 @@ font-size: 1.2rem;
 .MonsterMain{
   display: flex;
   flex-direction: row !important;
+}
+.InfoWeapons{
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* margin: auto; */
+  padding-bottom: 10px;
+  text-align: center;
+}
+.InfoWeapons Img{
+  width: 80%;
 }
 }
