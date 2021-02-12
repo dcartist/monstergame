@@ -15,9 +15,9 @@ function Home ()
     }, [] );
 
     return (
-        <div className="flex flex-col items-center justify-center flex-grow overflow-hidden m-0 p-0 homeSection">
+        <div className="flex flex-col items-center justify-center flex-grow m-0 p-0 homeSection">
             <div className="MonsterMain">
-                <div><h1 className="text-7xl font-thin fadeIn">Monsters Arena</h1></div>
+                <div><h1 className="text-6xl font-thin fadeIn">Monsters Arena</h1></div>
                 <div><p className="p-5 MonsterButton">{intro}</p></div>
 
             </div>

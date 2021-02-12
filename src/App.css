@@ -61,7 +61,7 @@ html, body {
 }
 
 .MonsterIntro {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -84,7 +84,7 @@ html, body {
 }
 .MonsterIntro img {
   /* width: 40%; */
-  height: 400px;
+  height: 275px;
 }
 
 .MonsterIntroMobile {
